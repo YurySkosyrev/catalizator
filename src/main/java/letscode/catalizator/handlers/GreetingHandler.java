@@ -22,13 +22,13 @@ public class GreetingHandler {
                 .orElse(0L);
         Long count = request.queryParam("count")
                 .map(Long::valueOf)
-                .orElse(3L);
+                .orElse(4L);
 
         Flux<Message> data = Flux
                 .just(
                         "Hello Reactive!",
                         "More then one",
-                        "Seconf post",
+                        "Second post",
                         "Third post"
                 )
                 .skip(start)
